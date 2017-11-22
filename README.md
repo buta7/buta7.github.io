@@ -59,6 +59,8 @@ deploy <sup id="a1">[1](#f1)</sup>
 
 * lektor-embed-x: embed youtube and twitter <sup id="a2">[2](#f2)</sup>
 
+        $ lektor plugins add lektor-embed-x
+
 ## Footnotes
 
 * <b id="f1">1:</b> see deploy.sh
