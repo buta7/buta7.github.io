@@ -64,4 +64,4 @@ deploy <sup id="a1">[1](#f1)</sup>
 ## Footnotes
 
 * <b id="f1">1:</b> see deploy.sh
-* <b id="f2">2:</b> ifram in github pages isn't allowed
+* <b id="f2">2:</b> iframe in github pages isn't allowed
