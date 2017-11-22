@@ -1,0 +1,3 @@
+[submodule "docs"]
+	path = docs
+	url = git@github-buta7:buta7/buta7.github.io.git
