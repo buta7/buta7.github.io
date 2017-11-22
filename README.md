@@ -48,10 +48,9 @@ initialize buta7.github.io repository
 
     $ git submodule add git@github-buta7:buta7/buta7.github.io.git build
     $ lektor build --output-path=build
-    $ 
 
-deploy[^1]
+deploy <sup id="a1">[1](#f1)</sup>
 
 	$ make deploy
 
-[^1]: see deploy.sh
+<b id="f1">1</b> see deploy.sh
