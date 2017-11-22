@@ -53,4 +53,4 @@ deploy <sup id="a1">[1](#f1)</sup>
 
 	$ make deploy
 
-<b id="f1">1</b> see deploy.sh
+<b id="f1">1:</b> see deploy.sh
