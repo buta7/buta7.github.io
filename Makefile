@@ -22,7 +22,6 @@ commit: add
 
 pull:
 	git pull
-	git update
 
 push:
 	git push -u origin master
