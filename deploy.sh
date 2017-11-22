@@ -5,8 +5,8 @@ echo -e "\033[0;32mDeploying updates to GitHub...\033[0m"
 # Build the project.
 lektor build --output-path=build
 
-# Go To Public folder
-cd docs
+# Go To Output folder
+cd build
 # Add changes to git.
 git add .
 
