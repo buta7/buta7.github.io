@@ -1,4 +1,4 @@
-BUILD_DIR=docs
+BUILD_DIR=build
 PYTHON=`which python`
 LEKTOR=`which lektor`
 
