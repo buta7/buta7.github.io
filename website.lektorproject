@@ -1,2 +1,5 @@
 [project]
 name = buta7-blog
+
+[packages]
+lektor-embed-x = 0.1.2
