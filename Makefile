@@ -1,29 +1,29 @@
+MAKEFLAGS += --warn-undefined-variables
+SHELL := /bin/bash
+.SHELLFLAGS := -eu -o pipefail -c
+.DEFAULT_GOAL := run
+
+# all targets are phony
+.PHONY: $(shell egrep -o ^[a-zA-Z_-]+: $(MAKEFILE_LIST) | sed 's/://')
+
+# .env
+ifneq ("$(wildcard ./.env)","")
+  include ./.env
+endif
+
 BUILD_DIR=build
-PYTHON=`which python`
-LEKTOR=`which lektor`
 
-server:
-	$(LEKTOR) server -h 0.0.0.0
+run: ## Run server
+	@lektor server -h 0.0.0.0
 
-gen:
-	$(LEKTOR) build --output-path=${BUILD_DIR}
+build: ## Build static html files
+	@lektor build --output-path=${BUILD_DIR}
 
-deploy: gen
-	./deploy.sh
+deploy: build ## Deploy on github
+	@sh ./deploy.sh
 
-status:
-	git status
-
-add:
-	git add .
-
-commit: add
-	git commit -m 'modify'
-
-pull:
-	git pull
-
-push:
-	git push -u origin master
-
-commit-push: commit push
+help: ## Print this help
+	@echo 'Usage: make [target]'
+	@echo ''
+	@echo 'Targets:'
+	@awk 'BEGIN {FS = ":.*?## "} /^[a-zA-Z0-9_-]+:.*?## / {printf "\033[36m%-30s\033[0m %s\n", $$1, $$2}' $(MAKEFILE_LIST)
