@@ -1,3 +1,0 @@
-[lektor.plugins]
-embed-x = lektor_embed_x:EmbedXPlugin
-
