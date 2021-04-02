@@ -1,5 +1,5 @@
 [project]
-name = buta7-blog
+name = buta7.github.io
 
 [packages]
 lektor-embed-x = 0.1.2
